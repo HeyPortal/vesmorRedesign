@@ -1,7 +1,7 @@
 
 # Sev Charles | Portfolio Website (Redesign)
 
-This repository contains the source code for the redesign of my personal portfolio website. It is a modern, interactive single-page application built to showcase my software engineering projects, journey, and skills. The site features a space-themed design with 3D elements, smooth animations, and a responsive UI.
+This repository contains the source code for the redesign of Romsev's personal portfolio website. It is a modern, interactive single-page application built to showcase my software engineering projects, journey, and skills. The site features a space-themed design with 3D elements, smooth animations, and a responsive UI.
 
 ## Tech Stack
 
