@@ -1,0 +1,33 @@
+.project-content p {
+    text-indent: 2.75rem /* 44px */;
+}
+
+.project-content {
+    /* Background removed */
+}
+
+/* smaller phone screens */
+@media (max-width: 768px) {
+    .project-content{
+        margin-left: 0;
+        width: 100vw;
+        transition: 0.5s ease
+    }
+
+    .project-image {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+/* big desktop screens */
+@media (min-width: 1281px){
+    .project-content {
+        width: calc(100vw - 240px);
+        margin-left: 15rem;
+        padding: 10rem;
+        padding-top: 5rem;
+    }
+}

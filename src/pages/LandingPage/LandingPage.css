@@ -1,0 +1,255 @@
+
+.introduction-plate {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 3;
+}
+
+.header-plate {
+    display: inline-block;
+    width: 50%;
+    z-index: inherit;
+}
+
+/* 2) second the name slides in */
+.name-plate {
+    animation: nameSlideIn 2s;
+    animation-delay: 2s;
+    animation-fill-mode: both;
+}
+.name-plate h1 {
+    font-size: 80px;
+    /* font: sans-serif; */
+}
+
+/* 3) third the subheading slides in */
+.subheading-plate {
+    animation: nameSlideIn 2s;
+    animation-delay: 4s;
+    animation-fill-mode: both;
+}
+
+/* 1) this moves over first */
+.graphics-plate{
+    vertical-align: top;
+    display: inline-block;
+    width:50%;
+    height: 300px;
+    animation: moveGraphicOver 2s;
+}
+
+.graphics-plate img{
+    max-width: 400px;
+    max-height: 400px;
+}
+
+/* then buttoms fade in */
+.buttons-plate {
+    position: fixed;
+    /* display: block; */
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-bottom: 30px;
+    z-index: 3;
+
+    animation: buttonFadeIn 4s;
+    animation-delay: 6s;
+    animation-fill-mode: both;
+}
+
+#about-btn{
+    position: absolute;
+   
+    bottom: 0px;
+
+    right: calc(25vw);
+    margin-right: -70px;
+    float: right;
+}
+
+#project-btn{
+    position: absolute;
+    left: calc(25vw);
+    margin-left: -70px;
+    float: left;
+    bottom: 0px;
+}
+
+@keyframes nameSlideIn {
+    0% {
+        opacity: 0;
+        filter: blur(5px);
+        transform: translateX(-100%)
+    }
+    100% {
+        opacity: 1;
+        filter: blur(0);
+        transform: translateX(0)
+    }
+}
+
+/*displays shorter text on landing page, dep on screen size*/
+.short-text{
+    display:none;
+}
+
+@keyframes moveGraphicOver {
+    0% {
+        transform: translateX(-70%);
+    }
+    30% {
+        transform: translateX(-70%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes buttonFadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes move-twink-back {
+    from {background-position:0 0;}
+    to {background-position:-10000px 5000px;}
+}
+
+.stars, .twinkling {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    width:100%;
+    height:100%;
+    display:block;
+}
+  
+.stars {
+    background:#000 url(/assets/images/stars.png) repeat top center;
+    z-index:0;
+}
+  
+.twinkling{
+    background:transparent url(/assets/images/twinkling.png) repeat top center;
+    z-index:2;
+    animation:move-twink-back 200s linear infinite;
+}
+
+
+@media (max-width: 768px) {
+
+    .introduction-plate {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 3;
+    }
+
+    .header-plate {
+        display: inline-block;
+        width: 100%;
+        z-index: inherit;
+    }
+
+    /* 2 second the name slides in */
+    .name-plate {
+        animation: nameSlideInQuery 2s;
+        animation-delay: 2s;
+        animation-fill-mode: both;
+
+        text-align: center;
+        text-wrap:nowrap;
+    }
+    .name-plate h1 {
+
+        font-size: 60px;
+        /* font: sans-serif; */
+    }
+
+    /* 3) third the subheading slides in */
+    .subheading-plate {
+        text-align: center;
+        animation: nameSlideInQuery 2s;
+        animation-delay: 4s;
+        animation-fill-mode: both;
+    }
+
+    /* 1) this moves down first */
+    .graphics-plate{
+        vertical-align: top;
+        display: inline-block;
+        width:10%;
+        height: 100%;
+        animation: moveGraphicOverQuery 2s;
+    }
+
+    .graphics-plate img{
+        max-width: 400px;
+        max-height: 400px;
+    }
+    /* then buttons fade in */
+    .buttons-plate {
+        position: fixed;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-bottom: 30px;
+        z-index: 3;
+        animation: buttonFadeIn 4s;
+        animation-delay: 6s;
+        animation-fill-mode: both;
+        display: flex;
+        justify-content: center;
+    }
+
+    #about-btn, #project-btn {
+        position: relative;
+        padding: 2rem;
+        bottom: 0;
+        font-size: 14px; /* Adjust the font size for smaller screens */
+        padding: 10px 20px; /* Adjust the padding for smaller screens */
+    }
+    
+    .short-text{
+        display: block;
+    }
+    .full-text{
+        display: none;
+    }
+    
+    @keyframes nameSlideInQuery {
+        0% {
+            opacity: 0;
+            filter: blur(5px);
+            transform: translateX(-100%)
+        }
+        100% {
+            opacity: 1;
+            filter: blur(0);
+            transform: translateX(0)
+        }
+    }
+
+    @keyframes moveGraphicOverQuery {
+        0% {
+            transform: translateY(-70%);
+        }
+        30% {
+            transform: translateY(-70%);
+        }
+        100% {
+            transform: translateX(0);
+        }
+    }
+
+}

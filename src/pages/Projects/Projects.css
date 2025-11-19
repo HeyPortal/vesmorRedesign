@@ -1,0 +1,19 @@
+.project-page {
+    /* background: url('/assets/images/starry_night_bg.jpg'); */
+    /* background-size: cover; */
+    transition: 0.5s ease;
+}
+
+@media (max-width: 768px) {
+    .project-page-div {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        transition: 0.5s ease;
+    }
+
+    #projectspage-heading {
+        margin: 0;
+        text-align: center;
+    }
+}
